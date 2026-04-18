@@ -18,32 +18,24 @@ Complete training data pipeline: annotation → quality control → model traini
 ## Architecture
 
 ```
-ai-studio/
+labelflow/
 ├── frontend/               # Next.js 15 (App Router)
 │   ├── app/
-│   │   ├── (auth)/        # login, register
+│   │   ├── (auth)/        # login
 │   │   ├── (dashboard)/   # workspace overview
-│   │   ├── projects/[id]/ # project detail
-│   │   ├── annotate/[id]/  # annotation editor (main canvas)
-│   │   ├── datasets/[id]/  # dataset management
-│   │   ├── models/         # model registry & marketplace
-│   │   └── settings/       # workspace settings
+│   │   ├── annotate/[id]/ # annotation editor
+│   │   └── page.tsx       # landing page
 │   ├── components/
-│   │   ├── canvas/         # annotation canvas (Fabric.js / Konva.js)
-│   │   ├── toolbar/         # annotation tools
-│   │   ├── sidebar/         # classes, layers, properties
-│   │   └── ui/             # shadcn components
+│   │   └── ui/            # shared components
 │   └── lib/
-│       ├── api.ts          # typed API client
-│       └── canvas-engine.ts
+│       └── api.ts         # typed API client
 ├── backend/                # FastAPI
 │   ├── app/
-│   │   ├── api/v1/         # REST endpoints
-│   │   ├── models/         # SQLAlchemy
-│   │   ├── schemas/        # Pydantic
-│   │   ├── services/       # business logic
-│   │   ├── ml/            # SAM 3, YOLO
-│   │   └── tasks/         # Celery
+│   │   ├── api/v1/        # REST endpoints
+│   │   ├── models/        # SQLAlchemy
+│   │   ├── schemas/       # Pydantic
+│   │   ├── services/      # business logic
+│   │   └── ml/            # SAM 3, YOLO
 │   └── alembic/           # migrations
 └── docker-compose.yml
 ```
