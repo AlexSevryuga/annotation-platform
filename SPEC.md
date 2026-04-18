@@ -1,19 +1,19 @@
-# AI Studio — Annotation Platform
+# LabelFlow — Training Data Platform
 
 ## Overview
 Платформа для аннотации изображений с AI-ассистированной разметкой (SAM 3).
+Complete training data pipeline: annotation → quality control → model training → deployment.
 
 **Аналоги:** Roboflow, Scale AI
 
 **Stack:**
-- Frontend: Next.js 15, TypeScript, Tailwind CSS, shadcn/ui
-- Backend: Python 3.12, FastAPI, SQLAlchemy 2.0, Alembic
-- ML: SAM 3 (Meta), PyTorch 2.7+
+- Frontend: Next.js 15, TypeScript, Tailwind CSS v3
+- Backend: Python 3.12, FastAPI, SQLAlchemy 2.0 (async), Alembic
+- ML: SAM 3 (Meta), PyTorch, YOLO (ultralytics)
 - DB: PostgreSQL 16
 - Storage: S3 (MinIO dev / Cloudflare R2 prod)
 - Queue: Redis + Celery
-- Cache: Redis
-- Auth: NextAuth.js v5
+- Auth: JWT (python-jose)
 
 ## Architecture
 

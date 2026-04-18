@@ -1,4 +1,6 @@
-@import "tailwindcss";
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
 
 :root {
   --background: #09090b;
@@ -10,10 +12,6 @@
   --error: #ef4444;
   --border: #27272a;
   --muted: #71717a;
-}
-
-* {
-  box-sizing: border-box;
 }
 
 body {

@@ -17,7 +17,7 @@ class Settings(BaseSettings):
     )
 
     # === Application ===
-    APP_NAME: str = "AI Studio API"
+    APP_NAME: str = "LabelFlow API"
     VERSION: str = "1.0.0"
     ENVIRONMENT: str = "development"  # development | staging | production
 

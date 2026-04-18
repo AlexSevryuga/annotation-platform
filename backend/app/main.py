@@ -23,8 +23,8 @@ async def lifespan(app: FastAPI):
 
 
 app = FastAPI(
-    title="AI Studio API",
-    description="Annotation Platform Backend",
+    title="LabelFlow API",
+    description="Training Data Platform Backend",
     version="1.0.0",
     lifespan=lifespan,
 )
