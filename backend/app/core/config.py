@@ -22,7 +22,7 @@ class Settings(BaseSettings):
     ENVIRONMENT: str = "development"  # development | staging | production
 
     # === Database ===
-    DATABASE_URL: str = "postgresql+asyncpg://annotation_user:annotation_pass@localhost:5432/annotation_db"
+    DATABASE_URL: str = "postgresql+asyncpg://labelflow_user:labelflow_pass@localhost:5432/labelflow_db"
 
     # === Redis ===
     REDIS_URL: str = "redis://localhost:6379"
@@ -31,7 +31,7 @@ class Settings(BaseSettings):
     S3_ENDPOINT: Optional[str] = None
     S3_ACCESS_KEY: Optional[str] = None
     S3_SECRET_KEY: Optional[str] = None
-    S3_BUCKET: str = "annotation-assets"
+    S3_BUCKET: str = "labelflow-assets"
     S3_REGION: str = "us-east-1"
 
     # === Auth ===
