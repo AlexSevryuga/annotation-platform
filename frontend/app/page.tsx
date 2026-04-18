@@ -9,22 +9,38 @@ export default function HomePage() {
     {
       title: "AI-Powered Segmentation",
       description: "SAM 3 click-to-segment, text prompts, and auto-segmentation for instant annotations",
-      icon: "🎯",
+      icon: (
+        <svg className="w-8 h-8" fill="none" viewBox="0 0 24 24" stroke="currentColor">
+          <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={1.5} d="M9.75 3.104v5.714a2.25 2.25 0 01-.659 1.591L5 14.5M9.75 3.104c-.251.023-.501.05-.75.082m.75-.082a24.301 24.301 0 014.5 0m0 0v5.714c0 .597.237 1.17.659 1.591L19.8 15.3M14.25 3.104c.251.023.501.05.75.082M19.8 15.3l-1.57.393A9.065 9.065 0 0112 15a9.065 9.065 0 00-6.23.693L5 14.5m14.8.8l1.402 1.402c1.232 1.232.65 3.318-1.067 3.611l-4.4.768a2.25 2.25 0 01-2.38-.054l-3.528-3.528a2.25 2.25 0 01-.054-2.38l.768-4.4a2.25 2.25 0 013.611-1.067l1.402 1.402" />
+        </svg>
+      ),
     },
     {
       title: "Real-time Collaboration",
       description: "Work together with your team. See cursors, comments, and instant updates",
-      icon: "👥",
+      icon: (
+        <svg className="w-8 h-8" fill="none" viewBox="0 0 24 24" stroke="currentColor">
+          <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={1.5} d="M15 19.128a9.38 9.38 0 002.625.372 9.337 9.337 0 004.121-.952 4.125 4.125 0 00-7.533-2.493M15 19.128v-.003c0-1.113-.285-2.16-.786-3.07M15 19.128v.106A12.318 12.318 0 018.624 21c-2.331 0-4.512-.645-6.374-1.766l-.001-.109a6.375 6.375 0 0111.964-3.07M12 6.375a3.375 3.375 0 11-6.75 0 3.375 3.375 0 016.75 0zm8.25 2.25a2.625 2.625 0 11-5.25 0 2.625 2.625 0 015.25 0z" />
+        </svg>
+      ),
     },
     {
       title: "Smart Workflow",
       description: "Assign, review, approve. Full pipeline with quality control and consensus scoring",
-      icon: "🔄",
+      icon: (
+        <svg className="w-8 h-8" fill="none" viewBox="0 0 24 24" stroke="currentColor">
+          <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={1.5} d="M3.75 3v11.25A2.25 2.25 0 006 16.5h2.25M3.75 3h-1.5m1.5 0h16.5m0 0h1.5m-1.5 0v11.25A2.25 2.25 0 0118 16.5h-2.25m-7.5 0h7.5m-7.5 0l-1 3m8.5-3l1 3m0 0l.5 1.5m-.5-1.5h-9.5m0 0l-.5 1.5m.75-9l3-3 2.148 2.148A12.061 12.061 0 0116.5 7.605" />
+        </svg>
+      ),
     },
     {
       title: "Model Training",
       description: "Train YOLO, RF-DETR models directly on your annotated data with one click",
-      icon: "🧠",
+      icon: (
+        <svg className="w-8 h-8" fill="none" viewBox="0 0 24 24" stroke="currentColor">
+          <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={1.5} d="M9.813 15.904L9 18.75l-.813-2.846a4.5 4.5 0 00-3.09-3.09L2.25 12l2.846-.813a4.5 4.5 0 003.09-3.09L9 5.25l.813 2.846a4.5 4.5 0 003.09 3.09L15.75 12l-2.846.813a4.5 4.5 0 00-3.09 3.09zM18.259 8.715L18 9.75l-.259 1.035a3.375 3.375 0 01-2.455-2.456L14.25 9l.259-1.035a3.375 3.375 0 012.455-2.456L18 5.25l.259 1.035a3.375 3.375 0 012.456 2.456L20.25 9l-.259 1.035a3.375 3.375 0 01-2.456 2.456zM16.894 20.567L16.5 21.75l-.394 1.183a2.25 2.25 0 01-1.973 1.557H9.427a2.25 2.25 0 01-1.973-1.557L7.5 21.75l-.394-1.183a2.25 2.25 0 111.973-3.138l.394-1.183.394 1.183a2.25 2.25 0 011.973 1.557h1.557a2.25 2.25 0 011.973-1.557z" />
+        </svg>
+      ),
     },
   ];
 
@@ -44,29 +60,91 @@ export default function HomePage() {
     { value: "<200ms", label: "SAM Inference" },
   ];
 
+  const designSystem = {
+    pattern: "Hero-Centric + Bento Dashboard",
+    style: "Soft UI Evolution",
+    colors: {
+      primary: "#7c3aed",
+      secondary: "#a855f7",
+      accent: "#c084fc",
+      background: "#09090b",
+      surface: "#18181b",
+      border: "#27272a",
+      text: "#fafafa",
+      muted: "#71717a",
+    },
+    typography: {
+      heading: "Inter",
+      body: "Inter",
+      mono: "JetBrains Mono",
+    },
+    effects: {
+      shadow: "0 4px 20px rgba(124, 58, 237, 0.15)",
+      transition: "all 0.2s ease",
+      radius: "12px",
+    },
+  };
+
   return (
-    <div className="min-h-screen">
+    <div className="min-h-screen" style={{ backgroundColor: designSystem.colors.background }}>
       {/* Navigation */}
-      <nav className="fixed top-0 left-0 right-0 z-50 glass">
+      <nav
+        className="fixed top-0 left-0 right-0 z-50 backdrop-blur-xl border-b"
+        style={{ borderColor: designSystem.colors.border, backgroundColor: "rgba(9, 9, 11, 0.8)" }}
+      >
         <div className="max-w-7xl mx-auto px-6 py-4">
           <div className="flex items-center justify-between">
             <div className="flex items-center gap-3">
-              <div className="w-8 h-8 rounded-lg bg-gradient-to-br from-violet-600 to-purple-500 flex items-center justify-center">
-                <span className="text-white font-bold text-sm">AI</span>
+              <div
+                className="w-10 h-10 rounded-xl flex items-center justify-center"
+                style={{ background: `linear-gradient(135deg, ${designSystem.colors.primary}, ${designSystem.colors.secondary})` }}
+              >
+                <span className="text-white font-bold">AI</span>
               </div>
-              <span className="text-lg font-semibold">AI Studio</span>
+              <span className="text-lg font-semibold" style={{ color: designSystem.colors.text }}>
+                AI Studio
+              </span>
             </div>
 
             <div className="hidden md:flex items-center gap-8">
-              <a href="#features" className="text-zinc-400 hover:text-white transition-colors">Features</a>
-              <a href="#demo" className="text-zinc-400 hover:text-white transition-colors">Demo</a>
-              <a href="#pricing" className="text-zinc-400 hover:text-white transition-colors">Pricing</a>
-              <a href="#docs" className="text-zinc-400 hover:text-white transition-colors">Docs</a>
+              {["Features", "Demo", "Pricing", "Docs"].map((item) => (
+                <a
+                  key={item}
+                  href={`#${item.toLowerCase()}`}
+                  className="text-sm transition-colors"
+                  style={{ color: designSystem.colors.muted }}
+                  onMouseEnter={(e) => (e.target.style.color = designSystem.colors.text)}
+                  onMouseLeave={(e) => (e.target.style.color = designSystem.colors.muted)}
+                >
+                  {item}
+                </a>
+              ))}
             </div>
 
             <div className="flex items-center gap-4">
-              <button className="text-zinc-400 hover:text-white transition-colors">Sign In</button>
-              <button className="px-4 py-2 bg-violet-600 hover:bg-violet-700 rounded-lg font-medium transition-colors">
+              <button
+                className="text-sm font-medium transition-colors"
+                style={{ color: designSystem.colors.muted }}
+                onMouseEnter={(e) => (e.target.style.color = designSystem.colors.text)}
+                onMouseLeave={(e) => (e.target.style.color = designSystem.colors.muted)}
+              >
+                Sign In
+              </button>
+              <button
+                className="px-5 py-2.5 rounded-xl font-medium text-sm transition-all"
+                style={{
+                  background: `linear-gradient(135deg, ${designSystem.colors.primary}, ${designSystem.colors.secondary})`,
+                  color: "white",
+                }}
+                onMouseEnter={(e) => {
+                  e.currentTarget.style.transform = "translateY(-2px)";
+                  e.currentTarget.style.boxShadow = designSystem.effects.shadow;
+                }}
+                onMouseLeave={(e) => {
+                  e.currentTarget.style.transform = "translateY(0)";
+                  e.currentTarget.style.boxShadow = "none";
+                }}
+              >
                 Get Started
               </button>
             </div>
@@ -77,39 +155,104 @@ export default function HomePage() {
       {/* Hero Section */}
       <section className="pt-32 pb-20 px-6">
         <div className="max-w-7xl mx-auto text-center">
-          <div className="inline-flex items-center gap-2 px-4 py-2 rounded-full border border-violet-500/30 bg-violet-500/10 mb-8 animate-fade-in">
-            <span className="w-2 h-2 rounded-full bg-green-500 animate-pulse" />
-            <span className="text-sm text-violet-300">SAM 3 Integration Available</span>
+          <div
+            className="inline-flex items-center gap-2 px-4 py-2 rounded-full mb-8"
+            style={{
+              background: `linear-gradient(135deg, ${designSystem.colors.primary}20, ${designSystem.colors.secondary}20)`,
+              border: `1px solid ${designSystem.colors.primary}40`,
+            }}
+          >
+            <span
+              className="w-2 h-2 rounded-full"
+              style={{ backgroundColor: "#22c55e" }}
+            />
+            <span className="text-sm font-medium" style={{ color: "#a78bfa" }}>
+              SAM 3 Integration Available
+            </span>
           </div>
 
-          <h1 className="text-5xl md:text-7xl font-bold mb-6 animate-fade-in" style={{ animationDelay: "0.1s" }}>
+          <h1
+            className="text-5xl md:text-7xl font-bold mb-6 tracking-tight"
+            style={{ color: designSystem.colors.text }}
+          >
             Annotate Images
             <br />
-            <span className="gradient-text">10x Faster</span>
+            <span
+              style={{
+                background: `linear-gradient(135deg, ${designSystem.colors.primary}, ${designSystem.colors.secondary}, ${designSystem.colors.accent})`,
+                WebkitBackgroundClip: "text",
+                WebkitTextFillColor: "transparent",
+              }}
+            >
+              10x Faster
+            </span>
             <br />
             with AI
           </h1>
 
-          <p className="text-xl text-zinc-400 max-w-2xl mx-auto mb-10 animate-fade-in" style={{ animationDelay: "0.2s" }}>
+          <p className="text-xl max-w-2xl mx-auto mb-10" style={{ color: designSystem.colors.muted }}>
             The professional annotation platform with SAM 3 integration,
             real-time collaboration, and one-click model training.
           </p>
 
-          <div className="flex flex-col sm:flex-row items-center justify-center gap-4 mb-16 animate-fade-in" style={{ animationDelay: "0.3s" }}>
-            <button className="px-8 py-4 bg-violet-600 hover:bg-violet-700 rounded-xl font-semibold text-lg transition-all hover:scale-105">
+          <div className="flex flex-col sm:flex-row items-center justify-center gap-4 mb-16">
+            <button
+              className="px-8 py-4 rounded-2xl font-semibold text-lg transition-all"
+              style={{
+                background: `linear-gradient(135deg, ${designSystem.colors.primary}, ${designSystem.colors.secondary})`,
+                color: "white",
+              }}
+              onMouseEnter={(e) => {
+                e.currentTarget.style.transform = "translateY(-3px) scale(1.02)";
+                e.currentTarget.style.boxShadow = "0 8px 30px rgba(124, 58, 237, 0.4)";
+              }}
+              onMouseLeave={(e) => {
+                e.currentTarget.style.transform = "translateY(0) scale(1)";
+                e.currentTarget.style.boxShadow = "none";
+              }}
+            >
               Start Free Trial
             </button>
-            <button className="px-8 py-4 border border-zinc-700 hover:border-zinc-600 rounded-xl font-medium text-lg transition-colors">
+            <button
+              className="px-8 py-4 rounded-2xl font-medium text-lg transition-all flex items-center gap-2"
+              style={{
+                border: `1px solid ${designSystem.colors.border}`,
+                color: designSystem.colors.text,
+              }}
+              onMouseEnter={(e) => {
+                e.currentTarget.style.borderColor = designSystem.colors.primary;
+                e.currentTarget.style.backgroundColor = `${designSystem.colors.primary}10`;
+              }}
+              onMouseLeave={(e) => {
+                e.currentTarget.style.borderColor = designSystem.colors.border;
+                e.currentTarget.style.backgroundColor = "transparent";
+              }}
+            >
+              <svg className="w-5 h-5" fill="none" viewBox="0 0 24 24" stroke="currentColor">
+                <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M14.752 11.168l-3.197 2.113A1 1 0 0010 9.87v4.263a1 1 0 001.555.832l3.197-2.113a1 1 0 000-1.664z" />
+                <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M21 12a9 9 0 11-18 0 9 9 0 0118 0z" />
+              </svg>
               Watch Demo
             </button>
           </div>
 
-          {/* Stats */}
-          <div className="grid grid-cols-2 md:grid-cols-4 gap-8 max-w-3xl mx-auto animate-fade-in" style={{ animationDelay: "0.4s" }}>
-            {stats.map((stat) => (
-              <div key={stat.label} className="text-center">
-                <div className="text-3xl font-bold text-white mb-1">{stat.value}</div>
-                <div className="text-sm text-zinc-500">{stat.label}</div>
+          {/* Stats Bento Grid */}
+          <div className="grid grid-cols-2 md:grid-cols-4 gap-4 max-w-4xl mx-auto">
+            {stats.map((stat, i) => (
+              <div
+                key={stat.label}
+                className="p-6 rounded-2xl border backdrop-blur-sm"
+                style={{
+                  background: `linear-gradient(135deg, ${designSystem.colors.surface}, ${designSystem.colors.background})`,
+                  borderColor: designSystem.colors.border,
+                }}
+              >
+                <div className="text-3xl font-bold mb-1" style={{ color: designSystem.colors.text }}>
+                  {stat.value}
+                </div>
+                <div className="text-sm" style={{ color: designSystem.colors.muted }}>
+                  {stat.label}
+                </div>
               </div>
             ))}
           </div>
@@ -120,51 +263,104 @@ export default function HomePage() {
       <section id="demo" className="py-20 px-6">
         <div className="max-w-7xl mx-auto">
           <div className="text-center mb-12">
-            <h2 className="text-4xl font-bold mb-4">Professional Annotation Canvas</h2>
-            <p className="text-zinc-400 text-lg">Figma-like experience with AI superpowers</p>
+            <h2 className="text-4xl font-bold mb-4" style={{ color: designSystem.colors.text }}>
+              Professional Annotation Canvas
+            </h2>
+            <p className="text-lg" style={{ color: designSystem.colors.muted }}>
+              Figma-like experience with AI superpowers
+            </p>
           </div>
 
-          {/* Canvas Mock */}
-          <div className="canvas-mock aspect-video relative overflow-hidden">
+          {/* Canvas Bento Grid */}
+          <div
+            className="rounded-3xl overflow-hidden border"
+            style={{
+              borderColor: designSystem.colors.border,
+              backgroundColor: designSystem.colors.surface,
+            }}
+          >
             {/* Toolbar */}
-            <div className="absolute top-0 left-0 right-0 h-14 bg-zinc-900/80 border-b border-zinc-800 flex items-center px-4 gap-2">
+            <div
+              className="h-16 px-6 flex items-center gap-4 border-b"
+              style={{ borderColor: designSystem.colors.border, backgroundColor: "rgba(24, 24, 27, 0.95)" }}
+            >
               <div className="flex items-center gap-1">
-                {annotationTools.map((tool) => (
+                {annotationTools.map((tool, i) => (
                   <button
                     key={tool.key}
-                    className="w-10 h-10 rounded-lg flex items-center justify-center text-xs font-bold transition-all hover:bg-zinc-800"
+                    className="w-11 h-11 rounded-xl flex items-center justify-center text-sm font-bold transition-all"
                     style={{
-                      background: activeFeature === annotationTools.indexOf(tool) ? tool.color + "20" : "transparent",
-                      border: activeFeature === annotationTools.indexOf(tool) ? `1px solid ${tool.color}` : "1px solid transparent",
-                      color: activeFeature === annotationTools.indexOf(tool) ? tool.color : "#71717a",
+                      backgroundColor: activeFeature === i ? `${tool.color}20` : "transparent",
+                      border: activeFeature === i ? `1px solid ${tool.color}` : "1px solid transparent",
+                      color: activeFeature === i ? tool.color : designSystem.colors.muted,
                     }}
                     title={`${tool.name} (${tool.key})`}
+                    onClick={() => setActiveFeature(i)}
+                    onMouseEnter={(e) => {
+                      if (activeFeature !== i) {
+                        e.currentTarget.style.backgroundColor = `${designSystem.colors.border}`;
+                        e.currentTarget.style.color = designSystem.colors.text;
+                      }
+                    }}
+                    onMouseLeave={(e) => {
+                      if (activeFeature !== i) {
+                        e.currentTarget.style.backgroundColor = "transparent";
+                        e.currentTarget.style.color = designSystem.colors.muted;
+                      }
+                    }}
                   >
                     {tool.key}
                   </button>
                 ))}
               </div>
 
-              <div className="w-px h-8 bg-zinc-700 mx-2" />
+              <div
+                className="w-px h-8"
+                style={{ backgroundColor: designSystem.colors.border }}
+              />
 
-              <div className="flex items-center gap-2">
-                <button className="px-3 py-1.5 rounded text-sm bg-violet-600 text-white font-medium">
-                  SAM 3
-                </button>
-              </div>
+              <button
+                className="px-4 py-2 rounded-xl text-sm font-medium flex items-center gap-2"
+                style={{
+                  background: `linear-gradient(135deg, ${designSystem.colors.primary}, ${designSystem.colors.secondary})`,
+                  color: "white",
+                }}
+              >
+                <svg className="w-4 h-4" fill="none" viewBox="0 0 24 24" stroke="currentColor">
+                  <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M9.813 15.904L9 18.75l-.813-2.846a4.5 4.5 0 00-3.09-3.09L2.25 12l2.846-.813a4.5 4.5 0 003.09-3.09L9 5.25l.813 2.846a4.5 4.5 0 003.09 3.09L15.75 12l-2.846.813a4.5 4.5 0 00-3.09 3.09z" />
+                </svg>
+                SAM 3
+              </button>
 
-              <div className="ml-auto flex items-center gap-4 text-sm text-zinc-500">
-                <span>Image 3/120</span>
-                <span>Zoom: 150%</span>
-                <span>Class: Car</span>
+              <div className="ml-auto flex items-center gap-6 text-sm" style={{ color: designSystem.colors.muted }}>
+                {[
+                  { label: "Image", value: "3/120" },
+                  { label: "Zoom", value: "150%" },
+                  { label: "Class", value: "Car" },
+                ].map((item) => (
+                  <div key={item.label} className="flex items-center gap-2">
+                    <span style={{ color: designSystem.colors.muted }}>{item.label}:</span>
+                    <span className="font-medium" style={{ color: designSystem.colors.text }}>
+                      {item.value}
+                    </span>
+                  </div>
+                ))}
               </div>
             </div>
 
             {/* Canvas Area */}
-            <div className="absolute top-14 left-0 right-0 bottom-14 flex">
-              {/* Left Sidebar - Classes */}
-              <div className="w-48 bg-zinc-900/50 border-r border-zinc-800 p-4">
-                <div className="text-xs text-zinc-500 uppercase tracking-wider mb-3">Classes</div>
+            <div className="flex" style={{ height: "500px" }}>
+              {/* Left Sidebar - Classes Bento */}
+              <div
+                className="w-56 p-4 border-r"
+                style={{ borderColor: designSystem.colors.border, backgroundColor: "rgba(9, 9, 11, 0.5)" }}
+              >
+                <div
+                  className="text-xs uppercase tracking-wider mb-4 font-medium"
+                  style={{ color: designSystem.colors.muted }}
+                >
+                  Classes
+                </div>
                 <div className="space-y-2">
                   {[
                     { name: "Car", color: "#7c3aed" },
@@ -172,82 +368,213 @@ export default function HomePage() {
                     { name: "Cyclist", color: "#f59e0b" },
                     { name: "Traffic Light", color: "#ef4444" },
                     { name: "Sign", color: "#06b6d4" },
-                  ].map((cls) => (
+                  ].map((cls, i) => (
                     <div
                       key={cls.name}
-                      className="flex items-center gap-2 px-3 py-2 rounded-lg hover:bg-zinc-800 cursor-pointer"
+                      className="flex items-center gap-3 px-3 py-2.5 rounded-xl cursor-pointer transition-all"
+                      style={{
+                        backgroundColor: i === 0 ? `${cls.color}15` : "transparent",
+                        border: i === 0 ? `1px solid ${cls.color}40` : "1px solid transparent",
+                      }}
+                      onMouseEnter={(e) => {
+                        if (i !== 0) e.currentTarget.style.backgroundColor = designSystem.colors.border;
+                      }}
+                      onMouseLeave={(e) => {
+                        if (i !== 0) e.currentTarget.style.backgroundColor = "transparent";
+                      }}
                     >
-                      <div className="w-3 h-3 rounded" style={{ backgroundColor: cls.color }} />
-                      <span className="text-sm">{cls.name}</span>
+                      <div
+                        className="w-4 h-4 rounded-lg"
+                        style={{ backgroundColor: cls.color }}
+                      />
+                      <span className="text-sm font-medium" style={{ color: designSystem.colors.text }}>
+                        {cls.name}
+                      </span>
                     </div>
                   ))}
                 </div>
               </div>
 
               {/* Center - Image Canvas */}
-              <div className="flex-1 relative bg-zinc-950">
-                {/* Mock image with annotations */}
-                <div className="absolute inset-0 flex items-center justify-center">
-                  <div className="relative">
+              <div className="flex-1 relative" style={{ backgroundColor: "#09090b" }}>
+                <div className="absolute inset-0 flex items-center justify-center p-8">
+                  <div className="relative w-full max-w-3xl">
                     {/* Background grid */}
-                    <div className="absolute inset-0 bg-[linear-gradient(45deg,#18181b_25%,transparent_25%)] bg-[length:20px_20px]" />
+                    <div
+                      className="absolute inset-0 rounded-2xl"
+                      style={{
+                        backgroundImage: `
+                          linear-gradient(${designSystem.colors.border}20 1px, transparent 1px),
+                          linear-gradient(90deg, ${designSystem.colors.border}20 1px, transparent 1px)
+                        `,
+                        backgroundSize: "40px 40px",
+                      }}
+                    />
 
                     {/* Mock image placeholder */}
-                    <div className="w-[600px] h-[400px] bg-gradient-to-br from-zinc-800 to-zinc-900 rounded-lg flex items-center justify-center border border-zinc-700 relative">
-                      <span className="text-zinc-600 text-lg">Upload your image</span>
+                    <div
+                      className="h-80 rounded-2xl flex items-center justify-center relative overflow-hidden"
+                      style={{
+                        background: `linear-gradient(135deg, ${designSystem.colors.surface}, #0f0f12)`,
+                        border: `1px solid ${designSystem.colors.border}`,
+                      }}
+                    >
+                      <span style={{ color: designSystem.colors.muted, fontSize: "18px" }}>
+                        Upload your image
+                      </span>
 
-                      {/* Bounding boxes */}
-                      <div className="absolute top-[20%] left-[15%] w-32 h-20 border-2 border-violet-500 rounded bg-violet-500/10" />
-                      <div className="absolute top-[60%] left-[55%] w-24 h-28 border-2 border-green-500 rounded bg-green-500/10" />
-                      <div className="absolute top-[35%] left-[70%] w-20 h-16 border-2 border-yellow-500 rounded bg-yellow-500/10" />
+                      {/* Bounding boxes with gradient */}
+                      <div
+                        className="absolute rounded-lg"
+                        style={{
+                          top: "18%",
+                          left: "12%",
+                          width: "140px",
+                          height: "90px",
+                          border: "2px solid #7c3aed",
+                          background: "linear-gradient(135deg, rgba(124, 58, 237, 0.15), rgba(124, 58, 237, 0.05))",
+                          boxShadow: "0 0 20px rgba(124, 58, 237, 0.3)",
+                        }}
+                      />
+                      <div
+                        className="absolute rounded-lg"
+                        style={{
+                          top: "55%",
+                          left: "50%",
+                          width: "100px",
+                          height: "120px",
+                          border: "2px solid #22c55e",
+                          background: "linear-gradient(135deg, rgba(34, 197, 94, 0.15), rgba(34, 197, 94, 0.05))",
+                          boxShadow: "0 0 20px rgba(34, 197, 94, 0.3)",
+                        }}
+                      />
+                      <div
+                        className="absolute rounded-lg"
+                        style={{
+                          top: "30%",
+                          left: "68%",
+                          width: "80px",
+                          height: "70px",
+                          border: "2px solid #f59e0b",
+                          background: "linear-gradient(135deg, rgba(245, 158, 11, 0.15), rgba(245, 158, 11, 0.05))",
+                          boxShadow: "0 0 20px rgba(245, 158, 11, 0.3)",
+                        }}
+                      />
 
                       {/* Polygon */}
-                      <svg className="absolute top-[45%] left-[25%] w-28 h-20">
+                      <svg
+                        className="absolute"
+                        style={{
+                          top: "40%",
+          left: "22%",
+          width: "120px",
+          height: "80px",
+        }}
+                      >
                         <polygon
-                          points="0,20 28,0 28,20 14,28"
-                          fill="none"
+                          points="0,40 60,0 120,40 60,80"
+                          fill="rgba(236, 72, 153, 0.2)"
                           stroke="#ec4899"
                           strokeWidth="2"
-                          className="opacity-50"
                         />
                       </svg>
+
+                      {/* SAM Preview */}
+                      <div
+                        className="absolute bottom-4 right-4 px-4 py-2 rounded-xl text-sm backdrop-blur-md"
+                        style={{
+                          background: `linear-gradient(135deg, ${designSystem.colors.primary}30, ${designSystem.colors.secondary}30)`,
+                          border: `1px solid ${designSystem.colors.primary}40`,
+                          color: "#c084fc",
+                        }}
+                      >
+                        SAM 3 ready • Click to segment
+                      </div>
                     </div>
                   </div>
-                </div>
-
-                {/* SAM Preview overlay */}
-                <div className="absolute bottom-4 right-4 glass rounded-lg p-3 text-xs text-zinc-400">
-                  SAM 3 ready • Click to segment
                 </div>
               </div>
 
-              {/* Right Sidebar - Properties */}
-              <div className="w-56 bg-zinc-900/50 border-l border-zinc-800 p-4">
-                <div className="text-xs text-zinc-500 uppercase tracking-wider mb-3">Properties</div>
+              {/* Right Sidebar - Properties Bento */}
+              <div
+                className="w-60 p-4 border-l"
+                style={{ borderColor: designSystem.colors.border, backgroundColor: "rgba(9, 9, 11, 0.5)" }}
+              >
+                <div
+                  className="text-xs uppercase tracking-wider mb-4 font-medium"
+                  style={{ color: designSystem.colors.muted }}
+                >
+                  Properties
+                </div>
 
-                <div className="space-y-4">
+                <div className="space-y-5">
                   <div>
-                    <div className="text-sm text-zinc-400 mb-1">Selected</div>
-                    <div className="text-white font-medium">Car #12</div>
-                  </div>
-
-                  <div>
-                    <div className="text-sm text-zinc-400 mb-1">Confidence</div>
-                    <div className="flex items-center gap-2">
-                      <div className="flex-1 h-2 bg-zinc-700 rounded-full overflow-hidden">
-                        <div className="w-[87%] h-full bg-violet-500" />
-                      </div>
-                      <span className="text-sm">87%</span>
+                    <div className="text-sm mb-1" style={{ color: designSystem.colors.muted }}>
+                      Selected
+                    </div>
+                    <div className="font-semibold" style={{ color: designSystem.colors.text }}>
+                      Car #12
                     </div>
                   </div>
 
                   <div>
-                    <div className="text-sm text-zinc-400 mb-1">Actions</div>
+                    <div className="text-sm mb-2" style={{ color: designSystem.colors.muted }}>
+                      Confidence
+                    </div>
+                    <div className="flex items-center gap-3">
+                      <div
+                        className="flex-1 h-2 rounded-full overflow-hidden"
+                        style={{ backgroundColor: designSystem.colors.border }}
+                      >
+                        <div
+                          className="h-full rounded-full"
+                          style={{
+                            width: "87%",
+                            background: `linear-gradient(90deg, ${designSystem.colors.primary}, ${designSystem.colors.secondary})`,
+                          }}
+                        />
+                      </div>
+                      <span className="text-sm font-medium" style={{ color: designSystem.colors.text }}>
+                        87%
+                      </span>
+                    </div>
+                  </div>
+
+                  <div>
+                    <div className="text-sm mb-2" style={{ color: designSystem.colors.muted }}>
+                      Actions
+                    </div>
                     <div className="flex gap-2">
-                      <button className="px-3 py-1.5 text-xs bg-green-500/20 text-green-400 rounded border border-green-500/30">
+                      <button
+                        className="px-4 py-2 rounded-lg text-sm font-medium transition-all"
+                        style={{
+                          backgroundColor: "rgba(34, 197, 94, 0.15)",
+                          border: "1px solid rgba(34, 197, 94, 0.3)",
+                          color: "#22c55e",
+                        }}
+                        onMouseEnter={(e) => {
+                          e.currentTarget.style.backgroundColor = "rgba(34, 197, 94, 0.25)";
+                        }}
+                        onMouseLeave={(e) => {
+                          e.currentTarget.style.backgroundColor = "rgba(34, 197, 94, 0.15)";
+                        }}
+                      >
                         Approve
                       </button>
-                      <button className="px-3 py-1.5 text-xs bg-red-500/20 text-red-400 rounded border border-red-500/30">
+                      <button
+                        className="px-4 py-2 rounded-lg text-sm font-medium transition-all"
+                        style={{
+                          backgroundColor: "rgba(239, 68, 68, 0.15)",
+                          border: "1px solid rgba(239, 68, 68, 0.3)",
+                          color: "#ef4444",
+                        }}
+                        onMouseEnter={(e) => {
+                          e.currentTarget.style.backgroundColor = "rgba(239, 68, 68, 0.25)";
+                        }}
+                        onMouseLeave={(e) => {
+                          e.currentTarget.style.backgroundColor = "rgba(239, 68, 68, 0.15)";
+                        }}
+                      >
                         Reject
                       </button>
                     </div>
@@ -257,44 +584,93 @@ export default function HomePage() {
             </div>
 
             {/* Status Bar */}
-            <div className="absolute bottom-0 left-0 right-0 h-10 bg-zinc-900/80 border-t border-zinc-800 flex items-center px-4 text-xs text-zinc-500">
-              <span>Auto-saved</span>
-              <span className="mx-4">•</span>
-              <span>Ctrl+Z to undo</span>
-              <span className="mx-4">•</span>
-              <span>Press ? for shortcuts</span>
+            <div
+              className="h-12 px-6 flex items-center gap-6 text-sm border-t"
+              style={{ borderColor: designSystem.colors.border, backgroundColor: "rgba(24, 24, 27, 0.8)" }}
+            >
+              {["Auto-saved", "Ctrl+Z to undo", "Press ? for shortcuts"].map((item, i) => (
+                <div key={i} className="flex items-center gap-2" style={{ color: designSystem.colors.muted }}>
+                  {i > 0 && <span style={{ color: designSystem.colors.border }}>•</span>}
+                  <span>{item}</span>
+                </div>
+              ))}
             </div>
           </div>
 
-          {/* Keyboard shortcuts hint */}
-          <div className="flex justify-center mt-6 gap-6 text-sm text-zinc-500">
-            <span><kbd className="px-2 py-1 bg-zinc-800 rounded">V</kbd> Select</span>
-            <span><kbd className="px-2 py-1 bg-zinc-800 rounded">B</kbd> Box</span>
-            <span><kbd className="px-2 py-1 bg-zinc-800 rounded">P</kbd> Polygon</span>
-            <span><kbd className="px-2 py-1 bg-zinc-800 rounded">W</kbd> SAM Wand</span>
-            <span><kbd className="px-2 py-1 bg-zinc-800 rounded">D/A</kbd> Next/Prev</span>
+          {/* Keyboard shortcuts Bento */}
+          <div className="flex justify-center mt-6 gap-6 text-sm">
+            {[
+              { key: "V", label: "Select" },
+              { key: "B", label: "Box" },
+              { key: "P", label: "Polygon" },
+              { key: "W", label: "SAM Wand" },
+              { key: "D/A", label: "Next/Prev" },
+            ].map((item) => (
+              <div key={item.key} className="flex items-center gap-2" style={{ color: designSystem.colors.muted }}>
+                <kbd
+                  className="px-2.5 py-1.5 rounded-lg text-xs font-mono font-medium"
+                  style={{
+                    backgroundColor: designSystem.colors.surface,
+                    border: `1px solid ${designSystem.colors.border}`,
+                    color: designSystem.colors.text,
+                  }}
+                >
+                  {item.key}
+                </kbd>
+                <span>{item.label}</span>
+              </div>
+            ))}
           </div>
         </div>
       </section>
 
-      {/* Features Section */}
+      {/* Features Bento Grid */}
       <section id="features" className="py-20 px-6">
         <div className="max-w-7xl mx-auto">
           <div className="text-center mb-16">
-            <h2 className="text-4xl font-bold mb-4">Everything You Need</h2>
-            <p className="text-zinc-400 text-lg">From annotation to production in one platform</p>
+            <h2 className="text-4xl font-bold mb-4" style={{ color: designSystem.colors.text }}>
+              Everything You Need
+            </h2>
+            <p className="text-lg" style={{ color: designSystem.colors.muted }}>
+              From annotation to production in one platform
+            </p>
           </div>
 
-          <div className="grid md:grid-cols-2 lg:grid-cols-4 gap-6">
+          <div className="grid md:grid-cols-2 lg:grid-cols-4 gap-4">
             {features.map((feature, index) => (
               <div
                 key={index}
-                className="p-6 rounded-2xl border border-zinc-800 bg-zinc-900/50 card-hover"
-                style={{ animationDelay: `${index * 0.1}s` }}
+                className="p-6 rounded-2xl border transition-all cursor-pointer"
+                style={{
+                  background: `linear-gradient(135deg, ${designSystem.colors.surface}, ${designSystem.colors.background})`,
+                  borderColor: designSystem.colors.border,
+                }}
+                onMouseEnter={(e) => {
+                  e.currentTarget.style.borderColor = designSystem.colors.primary;
+                  e.currentTarget.style.transform = "translateY(-4px)";
+                  e.currentTarget.style.boxShadow = `0 12px 40px rgba(124, 58, 237, 0.15)`;
+                }}
+                onMouseLeave={(e) => {
+                  e.currentTarget.style.borderColor = designSystem.colors.border;
+                  e.currentTarget.style.transform = "translateY(0)";
+                  e.currentTarget.style.boxShadow = "none";
+                }}
               >
-                <div className="text-4xl mb-4">{feature.icon}</div>
-                <h3 className="text-xl font-semibold mb-2">{feature.title}</h3>
-                <p className="text-zinc-400 text-sm">{feature.description}</p>
+                <div
+                  className="w-14 h-14 rounded-2xl flex items-center justify-center mb-4"
+                  style={{
+                    background: `linear-gradient(135deg, ${designSystem.colors.primary}20, ${designSystem.colors.secondary}20)`,
+                    color: designSystem.colors.primary,
+                  }}
+                >
+                  {feature.icon}
+                </div>
+                <h3 className="text-xl font-semibold mb-2" style={{ color: designSystem.colors.text }}>
+                  {feature.title}
+                </h3>
+                <p className="text-sm" style={{ color: designSystem.colors.muted }}>
+                  {feature.description}
+                </p>
               </div>
             ))}
           </div>
@@ -302,14 +678,18 @@ export default function HomePage() {
       </section>
 
       {/* How It Works */}
-      <section className="py-20 px-6 bg-zinc-950/50">
+      <section className="py-20 px-6" style={{ backgroundColor: designSystem.colors.surface }}>
         <div className="max-w-7xl mx-auto">
           <div className="text-center mb-16">
-            <h2 className="text-4xl font-bold mb-4">How It Works</h2>
-            <p className="text-zinc-400 text-lg">Three simple steps to production-ready data</p>
+            <h2 className="text-4xl font-bold mb-4" style={{ color: designSystem.colors.text }}>
+              How It Works
+            </h2>
+            <p className="text-lg" style={{ color: designSystem.colors.muted }}>
+              Three simple steps to production-ready data
+            </p>
           </div>
 
-          <div className="grid md:grid-cols-3 gap-8">
+          <div className="grid md:grid-cols-3 gap-6">
             {[
               {
                 step: "01",
@@ -327,13 +707,24 @@ export default function HomePage() {
                 description: "Export in any format. Train models with one click. Deploy to production.",
               },
             ].map((item, index) => (
-              <div key={index} className="relative">
-                <div className="text-8xl font-bold text-violet-600/20 absolute -top-4 -left-2">
+              <div key={index} className="relative p-8 rounded-3xl border" style={{
+                background: `linear-gradient(135deg, ${designSystem.colors.background}, ${designSystem.colors.surface})`,
+                borderColor: designSystem.colors.border,
+              }}>
+                <div
+                  className="text-7xl font-bold absolute -top-2 -left-2"
+                  style={{
+                    color: designSystem.colors.primary,
+                    opacity: 0.15,
+                  }}
+                >
                   {item.step}
                 </div>
-                <div className="relative pt-12">
-                  <h3 className="text-2xl font-semibold mb-3">{item.title}</h3>
-                  <p className="text-zinc-400">{item.description}</p>
+                <div className="relative pt-8">
+                  <h3 className="text-2xl font-semibold mb-3" style={{ color: designSystem.colors.text }}>
+                    {item.title}
+                  </h3>
+                  <p style={{ color: designSystem.colors.muted }}>{item.description}</p>
                 </div>
               </div>
             ))}
@@ -341,12 +732,16 @@ export default function HomePage() {
         </div>
       </section>
 
-      {/* Pricing Preview */}
+      {/* Pricing Bento */}
       <section id="pricing" className="py-20 px-6">
         <div className="max-w-7xl mx-auto">
           <div className="text-center mb-16">
-            <h2 className="text-4xl font-bold mb-4">Simple Pricing</h2>
-            <p className="text-zinc-400 text-lg">Start free, scale as you grow</p>
+            <h2 className="text-4xl font-bold mb-4" style={{ color: designSystem.colors.text }}>
+              Simple Pricing
+            </h2>
+            <p className="text-lg" style={{ color: designSystem.colors.muted }}>
+              Start free, scale as you grow
+            </p>
           </div>
 
           <div className="grid md:grid-cols-3 gap-6 max-w-5xl mx-auto">
@@ -355,7 +750,12 @@ export default function HomePage() {
                 name: "Free",
                 price: "$0",
                 description: "For individuals and hobbyists",
-                features: ["1,000 images/month", "Basic annotation tools", "1 project", "Export to COCO/YOLO"],
+                features: [
+                  "1,000 images/month",
+                  "Basic annotation tools",
+                  "1 project",
+                  "Export to COCO/YOLO",
+                ],
                 cta: "Get Started",
                 highlight: false,
               },
@@ -363,7 +763,13 @@ export default function HomePage() {
                 name: "Pro",
                 price: "$49",
                 description: "For professional teams",
-                features: ["Unlimited images", "SAM 3 access", "10 projects", "Team collaboration", "Priority support"],
+                features: [
+                  "Unlimited images",
+                  "SAM 3 access",
+                  "10 projects",
+                  "Team collaboration",
+                  "Priority support",
+                ],
                 cta: "Start Trial",
                 highlight: true,
               },
@@ -371,40 +777,81 @@ export default function HomePage() {
                 name: "Enterprise",
                 price: "Custom",
                 description: "For large organizations",
-                features: ["Unlimited everything", "SSO/SAML", "Audit logs", "Dedicated support", "On-premise option"],
+                features: [
+                  "Unlimited everything",
+                  "SSO/SAML",
+                  "Audit logs",
+                  "Dedicated support",
+                  "On-premise option",
+                ],
                 cta: "Contact Sales",
                 highlight: false,
               },
             ].map((plan, index) => (
               <div
                 key={index}
-                className={`p-8 rounded-2xl border ${
-                  plan.highlight
-                    ? "border-violet-500 bg-gradient-to-b from-violet-500/10 to-transparent"
-                    : "border-zinc-800 bg-zinc-900/50"
-                }`}
+                className="p-8 rounded-3xl border transition-all"
+                style={{
+                  background: plan.highlight
+                    ? `linear-gradient(135deg, ${designSystem.colors.primary}10, ${designSystem.colors.secondary}05)`
+                    : `linear-gradient(135deg, ${designSystem.colors.surface}, ${designSystem.colors.background})`,
+                  borderColor: plan.highlight ? designSystem.colors.primary : designSystem.colors.border,
+                  borderWidth: plan.highlight ? "2px" : "1px",
+                }}
               >
-                <div className="text-lg font-semibold mb-2">{plan.name}</div>
-                <div className="text-4xl font-bold mb-1">{plan.price}</div>
-                <div className="text-sm text-zinc-400 mb-6">{plan.description}</div>
+                <div className="text-lg font-semibold mb-2" style={{ color: designSystem.colors.text }}>
+                  {plan.name}
+                </div>
+                <div className="text-4xl font-bold mb-1" style={{ color: designSystem.colors.text }}>
+                  {plan.price}
+                </div>
+                <div className="text-sm mb-6" style={{ color: designSystem.colors.muted }}>
+                  {plan.description}
+                </div>
 
                 <ul className="space-y-3 mb-8">
                   {plan.features.map((feature, i) => (
-                    <li key={i} className="flex items-center gap-2 text-sm">
-                      <svg className="w-5 h-5 text-green-500" fill="none" viewBox="0 0 24 24" stroke="currentColor">
+                    <li key={i} className="flex items-center gap-3 text-sm">
+                      <svg
+                        className="w-5 h-5 flex-shrink-0"
+                        style={{ color: "#22c55e" }}
+                        fill="none"
+                        viewBox="0 0 24 24"
+                        stroke="currentColor"
+                      >
                         <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M5 13l4 4L19 7" />
                       </svg>
-                      {feature}
+                      <span style={{ color: designSystem.colors.text }}>{feature}</span>
                     </li>
                   ))}
                 </ul>
 
                 <button
-                  className={`w-full py-3 rounded-xl font-medium transition-all ${
+                  className="w-full py-3 rounded-xl font-medium transition-all"
+                  style={
                     plan.highlight
-                      ? "bg-violet-600 hover:bg-violet-700"
-                      : "border border-zinc-700 hover:border-zinc-600"
-                  }`}
+                      ? {
+                          background: `linear-gradient(135deg, ${designSystem.colors.primary}, ${designSystem.colors.secondary})`,
+                          color: "white",
+                        }
+                      : {
+                          border: `1px solid ${designSystem.colors.border}`,
+                          color: designSystem.colors.text,
+                        }
+                  }
+                  onMouseEnter={(e) => {
+                    if (plan.highlight) {
+                      e.currentTarget.style.boxShadow = "0 4px 20px rgba(124, 58, 237, 0.4)";
+                    } else {
+                      e.currentTarget.style.borderColor = designSystem.colors.primary;
+                    }
+                  }}
+                  onMouseLeave={(e) => {
+                    e.currentTarget.style.boxShadow = "none";
+                    if (!plan.highlight) {
+                      e.currentTarget.style.borderColor = designSystem.colors.border;
+                    }
+                  }}
                 >
                   {plan.cta}
                 </button>
@@ -415,24 +862,38 @@ export default function HomePage() {
       </section>
 
       {/* Footer */}
-      <footer className="py-12 px-6 border-t border-zinc-800">
+      <footer className="py-12 px-6 border-t" style={{ borderColor: designSystem.colors.border }}>
         <div className="max-w-7xl mx-auto">
           <div className="flex flex-col md:flex-row items-center justify-between gap-6">
             <div className="flex items-center gap-3">
-              <div className="w-8 h-8 rounded-lg bg-gradient-to-br from-violet-600 to-purple-500 flex items-center justify-center">
-                <span className="text-white font-bold text-sm">AI</span>
+              <div
+                className="w-10 h-10 rounded-xl flex items-center justify-center"
+                style={{
+                  background: `linear-gradient(135deg, ${designSystem.colors.primary}, ${designSystem.colors.secondary})`,
+                }}
+              >
+                <span className="text-white font-bold">AI</span>
               </div>
-              <span className="text-lg font-semibold">AI Studio</span>
+              <span className="text-lg font-semibold" style={{ color: designSystem.colors.text }}>
+                AI Studio
+              </span>
             </div>
 
-            <div className="flex items-center gap-8 text-sm text-zinc-500">
-              <a href="#" className="hover:text-white transition-colors">Documentation</a>
-              <a href="#" className="hover:text-white transition-colors">API</a>
-              <a href="#" className="hover:text-white transition-colors">Privacy</a>
-              <a href="#" className="hover:text-white transition-colors">Terms</a>
+            <div className="flex items-center gap-8 text-sm" style={{ color: designSystem.colors.muted }}>
+              {["Documentation", "API", "Privacy", "Terms"].map((item) => (
+                <a
+                  key={item}
+                  href="#"
+                  className="transition-colors"
+                  onMouseEnter={(e) => (e.target.style.color = designSystem.colors.text)}
+                  onMouseLeave={(e) => (e.target.style.color = designSystem.colors.muted)}
+                >
+                  {item}
+                </a>
+              ))}
             </div>
 
-            <div className="text-sm text-zinc-500">
+            <div className="text-sm" style={{ color: designSystem.colors.muted }}>
               © 2026 AI Studio. All rights reserved.
             </div>
           </div>
