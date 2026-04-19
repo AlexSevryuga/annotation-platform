@@ -68,8 +68,8 @@ class User(Base):
     owned_workspaces = relationship("Workspace", back_populates="owner")
     memberships = relationship("WorkspaceMember", back_populates="user")
     created_projects = relationship("Project", back_populates="created_by")
-    created_annotations = relationship("Annotation", back_populates="created_by_user")
-    reviewed_annotations = relationship("Annotation", back_populates="reviewed_by_user")
+    created_annotations = relationship("Annotation", back_populates="created_by_user", foreign_keys="Annotation.created_by_id")
+    reviewed_annotations = relationship("Annotation", back_populates="reviewed_by_user", foreign_keys="Annotation.reviewed_by_id")
 
 
 class Workspace(Base):
@@ -211,8 +211,8 @@ class Annotation(Base):
     # Relationships
     image = relationship("Image", back_populates="annotations")
     class_ = relationship("Class", back_populates="annotations")
-    created_by_user = relationship("User", back_populates="created_annotations")
-    reviewed_by_user = relationship("User", back_populates="reviewed_annotations")
+    created_by_user = relationship("User", back_populates="created_annotations", foreign_keys=[created_by_id])
+    reviewed_by_user = relationship("User", back_populates="reviewed_annotations", foreign_keys=[reviewed_by_id])
 
     __table_args__ = (
         Index("idx_annotations_image", "image_id"),
@@ -321,7 +321,7 @@ class AuditLog(Base):
     action: Mapped[str] = mapped_column(String(100), nullable=False)  # create, update, delete, login
     resource_type: Mapped[str] = mapped_column(String(50), nullable=False)  # project, image, annotation
     resource_id: Mapped[Optional[uuid.UUID]] = mapped_column(UUID(as_uuid=True), nullable=True)
-    metadata: Mapped[dict] = mapped_column(JSON, default={})
+    action_meta: Mapped[dict] = mapped_column(JSON, default={})
     ip_address: Mapped[Optional[str]] = mapped_column(String(45), nullable=True)  # IPv6 compatible
     created_at: Mapped[datetime] = mapped_column(DateTime, default=datetime.utcnow)
 

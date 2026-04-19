@@ -106,8 +106,8 @@ export default function HomePage() {
                   href={`#${item.toLowerCase().replace(" ", "-")}`}
                   className="text-sm transition-colors"
                   style={{ color: designSystem.colors.muted }}
-                  onMouseEnter={(e) => (e.target.style.color = designSystem.colors.text)}
-                  onMouseLeave={(e) => (e.target.style.color = designSystem.colors.muted)}
+                  onMouseEnter={(e) => (e.currentTarget.style.color = designSystem.colors.text)}
+                  onMouseLeave={(e) => (e.currentTarget.style.color = designSystem.colors.muted)}
                 >
                   {item}
                 </a>
@@ -118,8 +118,8 @@ export default function HomePage() {
               <button
                 className="text-sm font-medium transition-colors"
                 style={{ color: designSystem.colors.muted }}
-                onMouseEnter={(e) => (e.target.style.color = designSystem.colors.text)}
-                onMouseLeave={(e) => (e.target.style.color = designSystem.colors.muted)}
+                onMouseEnter={(e) => (e.currentTarget.style.color = designSystem.colors.text)}
+                onMouseLeave={(e) => (e.currentTarget.style.color = designSystem.colors.muted)}
               >
                 Sign In
               </button>
@@ -874,8 +874,8 @@ export default function HomePage() {
                   key={item}
                   href="#"
                   className="transition-colors"
-                  onMouseEnter={(e) => (e.target.style.color = designSystem.colors.text)}
-                  onMouseLeave={(e) => (e.target.style.color = designSystem.colors.muted)}
+                  onMouseEnter={(e) => (e.currentTarget.style.color = designSystem.colors.text)}
+                  onMouseLeave={(e) => (e.currentTarget.style.color = designSystem.colors.muted)}
                 >
                   {item}
                 </a>

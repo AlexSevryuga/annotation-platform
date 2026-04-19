@@ -14,7 +14,7 @@ COPY --from=deps /app/node_modules ./node_modules
 COPY . .
 RUN npm run build
 
-# Production image, copy all the files and run next
+# Production image
 FROM base AS runner
 WORKDIR /app
 
@@ -24,28 +24,12 @@ RUN addgroup --system --gid 1001 nodejs
 RUN adduser --system --uid 1001 nextjs
 
 COPY --from=builder /app/public ./public
-
-# Set the correct permission for prerender cache
-RUN mkdir .next && chown nextjs:nodejs .next
-
-# Production image, copy all the files and run next
-FROM base AS production
-WORKDIR /app
-
-ENV NODE_ENV=production
-
-RUN addgroup --system --gid 1001 nodejs
-RUN adduser --system --uid 1001 nextjs
-
-COPY --from=builder /app/public ./public
-COPY --from=builder /app/.next/standalone ./
-COPY --from=builder /app/.next/static ./.next/static
+COPY --from=builder /app/.next ./.next
 
 USER nextjs
 
 EXPOSE 3000
 
 ENV PORT=3000
-ENV HOSTNAME="0.0.0.0"
 
-CMD ["node", "server.js"]
+CMD ["npm", "start"]
